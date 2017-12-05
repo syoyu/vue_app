@@ -6,7 +6,7 @@
       </p>
 
       <aaaaa/>
-//aaaaa
+
       <div id="app2">
        <calendar></calendar>
       </div>
