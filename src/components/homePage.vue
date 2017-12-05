@@ -5,7 +5,7 @@
         Welcome home.
       </p>
 
-      <aaaaa/>
+      <countUp/>
 
       <div id="app2">
        <calendar></calendar>
@@ -20,6 +20,7 @@
     components: { customToolbar }
   }
 
-  import calendar from './calendar'
+  //import calendar from './calendar'
   import aaaaa from './aaaaa'
+  import countUp from './countUp'
 </script>
