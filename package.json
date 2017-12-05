@@ -5,8 +5,9 @@
   "dependencies": {
     "onsenui": "2.4.x",
     "vue": "2.3.x",
+    "vue-event-calendar": "^1.5.1",
+    "vue-loader": "11.0.0",
     "vue-onsenui": "2.0.0",
-    "vue-template-compiler": "2.3.x",
-    "vue-loader": "11.0.0"
+    "vue-template-compiler": "2.3.x"
   }
 }

@@ -6,7 +6,7 @@
       </p>
 
       <countUp/>
-
+      <calendar/>
       <div id="app2">
        <calendar></calendar>
       </div>
@@ -20,7 +20,6 @@
     components: { customToolbar }
   }
 
-  //import calendar from './calendar'
-  import aaaaa from './aaaaa'
+  import calendar from './calendar'
   import countUp from './countUp'
 </script>
