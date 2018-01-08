@@ -50,7 +50,8 @@ module.exports = {
     unsafeCache: useCache,
 
     alias: {
-      vue:'vue/dist/vue.common.js'
+      //スタンドアロン版にしてみた
+      vue:'vue/dist/vue.esm.js'
     }
   },
 
