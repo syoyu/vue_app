@@ -8,7 +8,7 @@
       </p>
 
 <!-- カレンダー -->
-        <practice></practice>
+        <list></list>
         <calendar></calendar>
 
 
@@ -22,7 +22,7 @@
   import Vue from 'vue'
   import customToolbar from './toolbar'
 // 練習用
-  import Practice from './practice.vue'
+  import List from './list.vue'
 
 // カレンダーインポート
   import 'vue-event-calendar/dist/style.css'
@@ -36,7 +36,7 @@
   }
 
 //コンポーネントを登録
-  Vue.component('practice',Practice)
+  Vue.component('list',List)
   Vue.component('calendar',Calendar)
   Vue.use(vueEventCalendar, {locale: 'en'})
 
