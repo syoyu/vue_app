@@ -7,8 +7,22 @@
         Welcome home.
       </p>
 
+
+      {{count}}
+      <p>
+        <button @click="increment">+</button>
+      </p>
+
+      <ul>
+        <li v-for="item in displayedlists">
+          {{ item.title }}<br>
+          　　{{item.date}}<br>
+          　　{{item.start}}<br>
+          　　{{item.finish}}
+        </li>
+      </ul>
 <!-- カレンダー -->
-        <list></list>
+
         <calendar></calendar>
 
 
@@ -21,23 +35,31 @@
 <script>
   import Vue from 'vue'
   import customToolbar from './toolbar'
-// 練習用
-  import List from './list.vue'
 
 // カレンダーインポート
   import 'vue-event-calendar/dist/style.css'
   import vueEventCalendar from 'vue-event-calendar'
   import Calendar from './calendar.vue'
-  // import Calendar from './m_calendar.vue'
+  import { mapState ,mapGetters} from 'vuex'
+  import { mapMutations } from 'vuex'
+
 
   export default {
     props: ['toggleMenu'],
-    components: { customToolbar }
+    components: { customToolbar,
+                  Calendar
+                },
+    computed:{
+      ...mapState(['count','lists']),
+      ...mapGetters(['getLists']),
+      displayedlists(){
+        return this.getLists
+      },
+    },
+    methods:
+      mapMutations(['increment'])
   }
 
-//コンポーネントを登録
-  Vue.component('list',List)
-  Vue.component('calendar',Calendar)
   Vue.use(vueEventCalendar, {locale: 'en'})
 
 </script>

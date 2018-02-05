@@ -14,10 +14,10 @@
   import customToolbar from './toolbar'
   import Add from './addPlan.vue'
 
-  Vue.component('add' , Add)
+  
 
   export default {
     props: ['toggleMenu'],
-    components: { customToolbar }
+    components: { customToolbar , Add}
   }
 </script>

@@ -8,10 +8,15 @@
         　　{{item.finish}}
       </li>
     </ul>
+
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+
+
+
 export default {
   name: 'list',
 
@@ -28,10 +33,14 @@ export default {
          start:'9時',
          finish:'16時',
         },
-      ]
+      ],
+      newPlanCostomer:'',
+      newPlanDate:'',
+      newPlanStart:'',
+      newPlanFinish:'',
     }
   },
 
-
+  
 }
 </script>
