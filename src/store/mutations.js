@@ -1,5 +1,4 @@
 export const state = {
-  count:0,
   lists:[
     {title:'長崎建設',
      date:'2018/1/10',
@@ -12,6 +11,7 @@ export const state = {
      finish:'16時',
     },
   ],
+  //一旦入れる入れ物
   newPlanCostomer:'',
   newPlanDate:'',
   newPlanStart:'',
@@ -19,10 +19,7 @@ export const state = {
 };
 
 export const mutations = {
-  increment(state){
-    state.count++
-  },
-
+  //一旦入れとくmethods
   addCostomer(state,payload){
     state.newPlanCostomer = payload;
   },

@@ -46,6 +46,7 @@
 
     data:function(){
       return{
+        //v-modelの入れ物
         newCostomer:'',
         newDate:'',
         newStart:'',
@@ -54,8 +55,10 @@
     },
 
     computed:{
-      ...mapState(['count','lists','newPlanCostomer','newPlanDate','newPlanStart','newPlanFinish']),
+      ...mapState(['lists','newPlanCostomer','newPlanDate','newPlanStart','newPlanFinish']),
       ...mapGetters(['getLists']),
+
+      //リスト表示
       displayedlists(){
         return this.getLists
       },
@@ -64,39 +67,6 @@
       ...mapMutations(['addPlan','addCostomer','addDate','addStart','addFinish']),
     }
   }
-      // mapMutations(['connectCostomer','connectDate','connectStart','connectFinish','addPlan']),
-
-
-      // connectCostomer: function(newC){
-      //   this.newPlanCostomer = newC;
-      // },
-      //
-      // connectDate: function(newD){
-      //   this.newPlanDate = newD;
-      // },
-      //
-      // connectStart: function(newS){
-      //   this.newPlanStart = newS;
-      // },
-      //
-      // connectFinish: function(newF){
-      //   this.newPlanFinish = newF;
-      // },
-      //
-      // addPlan: function(newCostomer,newDate,newStart,newFinish){
-      //   this.lists.push({
-      //     title: newCostomer,
-      //     date: newDate,
-      //     start: newStart,
-      //     finish: newFinish
-      //   });
-      //   this.newPlanCostomer = '';
-      //   this.newPlanDate = '';
-      //   this.newPlanStart = '';
-      //   this.newPlanFinish = '';
-      // },
-
-
 
 
 </script>

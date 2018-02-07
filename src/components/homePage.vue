@@ -7,12 +7,6 @@
         Welcome home.
       </p>
 
-
-      {{count}}
-      <p>
-        <button @click="increment">+</button>
-      </p>
-
       <ul>
         <li v-for="item in displayedlists">
           {{ item.title }}<br>
@@ -40,8 +34,8 @@
   import 'vue-event-calendar/dist/style.css'
   import vueEventCalendar from 'vue-event-calendar'
   import Calendar from './calendar.vue'
-  import { mapState ,mapGetters} from 'vuex'
-  import { mapMutations } from 'vuex'
+  import { mapState ,mapGetters ,mapMutations} from 'vuex'
+  import {  } from 'vuex'
 
 
   export default {
@@ -50,16 +44,13 @@
                   Calendar
                 },
     computed:{
-      ...mapState(['count','lists']),
+      ...mapState(['lists']),
       ...mapGetters(['getLists']),
       displayedlists(){
         return this.getLists
       },
     },
-    methods:
-      mapMutations(['increment'])
-  }
-
+}
   Vue.use(vueEventCalendar, {locale: 'en'})
 
 </script>
