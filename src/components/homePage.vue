@@ -35,7 +35,6 @@
   import vueEventCalendar from 'vue-event-calendar'
   import Calendar from './calendar.vue'
   import { mapState ,mapGetters ,mapMutations} from 'vuex'
-  import {  } from 'vuex'
 
 
   export default {
@@ -50,7 +49,8 @@
         return this.getLists
       },
     },
-}
+  }
+
   Vue.use(vueEventCalendar, {locale: 'en'})
 
 </script>

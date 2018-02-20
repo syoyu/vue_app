@@ -25,14 +25,6 @@
       追加
     </button>
 
-    <ul>
-      <li v-for="item in displayedlists">
-        {{ item.title }}<br>
-        　　{{item.date}}<br>
-        　　{{item.start}}<br>
-        　　{{item.finish}}
-      </li>
-    </ul>
 
   </div>
 </template>
@@ -55,13 +47,8 @@
     },
 
     computed:{
-      ...mapState(['lists','newPlanCostomer','newPlanDate','newPlanStart','newPlanFinish']),
-      ...mapGetters(['getLists']),
-
-      //リスト表示
-      displayedlists(){
-        return this.getLists
-      },
+      ...mapState(['events','newPlanCostomer','newPlanDate','newPlanStart','newPlanFinish']),
+      ...mapGetters(['getEvents']),
     },
     methods:{
       ...mapMutations(['addPlan','addCostomer','addDate','addStart','addFinish']),

@@ -6,6 +6,7 @@
     </p>
 
     <app></app>
+
   </v-ons-page>
 </template>
 
@@ -14,7 +15,9 @@
   import customToolbar from './toolbar'
   import Msg from './app1.vue'
 
+
   Vue.component('app',Msg)
+
 
   export default {
     props: ['toggleMenu'],

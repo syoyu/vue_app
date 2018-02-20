@@ -11,6 +11,19 @@ export const state = {
      finish:'16時',
     },
   ],
+
+  events: [
+  {title:'広島建設',
+   date:'2018/2/10',
+   start:'8時',
+   finish:'17時',
+  },
+  {title:'石本建設',
+   date:'2018/2/15',
+   start:'9時',
+   finish:'16時',
+  },
+],
   //一旦入れる入れ物
   newPlanCostomer:'',
   newPlanDate:'',
@@ -37,7 +50,7 @@ export const mutations = {
   },
 
   addPlan(state){
-    state.lists.push({
+    state.events.push({
       title: state.newPlanCostomer,
       date: state.newPlanDate,
       start: state.newPlanStart,
@@ -47,6 +60,8 @@ export const mutations = {
     state.newPlanDate='';
     state.newPlanStart='';
     state.newPlanFinish='';
+
+    console.log("Completed!!");
   },
 
   saveTodo(state){
