@@ -24,43 +24,18 @@ export const state = {
    finish:'16時',
   },
 ],
-  //一旦入れる入れ物
-  newPlanCostomer:'',
-  newPlanDate:'',
-  newPlanStart:'',
-  newPlanFinish:'',
 };
 
 export const mutations = {
-  //一旦入れとくmethods
-  addCostomer(state,payload){
-    state.newPlanCostomer = payload;
-  },
-
-  addDate(state,payload){
-    state.newPlanDate = payload;
-  },
-
-  addStart(state,payload){
-    state.newPlanStart = payload;
-  },
-
-  addFinish(state,payload){
-    state.newPlanFinish = payload;
-  },
-
-  addPlan(state){
+  //予定追加
+  addPlan(state,payload){
     state.events.push({
-      title: state.newPlanCostomer,
-      date: state.newPlanDate,
-      start: state.newPlanStart,
-      finish: state.newPlanFinish,
+      title: payload.newPlanCostomer,
+      date: payload.newPlanDate,
+      start: payload.newPlanStart,
+      finish: payload.newPlanFinish,
     });
-    state.newPlanCostomer='';
-    state.newPlanDate='';
-    state.newPlanStart='';
-    state.newPlanFinish='';
-
+    
     console.log("Completed!!");
   },
 

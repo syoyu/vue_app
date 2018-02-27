@@ -1,27 +1,30 @@
 <template>
   <div id="add">
 
-    <p>得意先</p>
+    <p>施行日</p>
     <p><input type="text"
-           v-model="newCostomer"
-           v-on:keyup.enter="addCostomer(newCostomer)"></p>
-
-    <p>日付</p>
-    <p><input type="text"
-          v-model="newDate"
-          v-on:keyup.enter="addDate(newDate)"></p>
+          v-model="newDate"></p>
 
     <p>開始時刻</p>
     <p><input type="text"
-          v-model="newStart"
-          v-on:keyup.enter="addStart(newStart)"></p>
+          v-model="newStart"></p>
 
-    <p>終了時刻</p>
+    <p>終了予定時刻</p>
     <p><input type="text"
-          v-model="newFinish"
-          v-on:keyup.enter="addFinish(newFinish)"></p>
+          v-model="newFinish"></p>
 
-    <button v-on:click="addPlan()">
+    <p>得意先</p>
+    <p><input type="text"
+           v-model="newCostomer"></p>
+
+    <!-- <p>担当者</p>
+    <p><input type="text"
+              v-model="newStaff"
+              v-on:keyup.enter="addStaff(newStaff)"></p> -->
+
+
+
+    <button v-on:click="add()">
       追加
     </button>
 
@@ -31,7 +34,7 @@
 
 <script>
   import Vue from 'vue'
-  import { mapState,mapMutations,mapGetters } from 'vuex'
+  import { mapState,mapMutations } from 'vuex'
 
   export default{
     name: 'add',
@@ -47,11 +50,18 @@
     },
 
     computed:{
-      ...mapState(['events','newPlanCostomer','newPlanDate','newPlanStart','newPlanFinish']),
-      ...mapGetters(['getEvents']),
+      ...mapState(['events']),
     },
     methods:{
-      ...mapMutations(['addPlan','addCostomer','addDate','addStart','addFinish']),
+      ...mapMutations(['addPlan']),
+      add(){
+        this.addPlan({
+          newPlanCostomer:this.newCostomer,
+          newPlanDate:this.newDate,
+          newPlanStart:this.newStart,
+          newPlanFinish:this.newFinish,
+        })
+      }
     }
   }
 
