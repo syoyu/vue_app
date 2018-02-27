@@ -4,13 +4,20 @@
     <p style="text-align: center">
       Change the settings.
     </p>
+
+    <add></add>
   </v-ons-page>
 </template>
 
 <script>
+  import Vue from 'vue'
   import customToolbar from './toolbar'
+  import Add from './addPlan.vue'
+
+  
+
   export default {
     props: ['toggleMenu'],
-    components: { customToolbar }
+    components: { customToolbar , Add}
   }
 </script>
