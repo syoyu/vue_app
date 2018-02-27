@@ -2,9 +2,10 @@
   <div id="add">
 
     <p>施行日</p>
-    <p><input type="text"
-          v-model="newDate"></p>
-
+    <el-date-picker v-model="newDate"
+                  　type="date"
+                  　placeholder="日時を選択してください"
+                    value-format="yyyy/MM/dd"></el-date-picker>
     <p>開始時刻</p>
     <p><input type="text"
           v-model="newStart"></p>
@@ -46,6 +47,7 @@
         newDate:'',
         newStart:'',
         newFinish:'',
+        datetime: '',
       }
     },
 
